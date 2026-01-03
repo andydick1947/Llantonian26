@@ -37,8 +37,9 @@ for (let x=1; x<=12; x++){
   y.addEventListener("click",function(e){
     let month=e.target.innerText;
         selectedMonth=month;
-   const selectedMonthValue = selectedMonth.value;
-   localStorage.setItem('selectedMonth', selectedMonth);
+        console.log(selectedMonth);
+        const selectedMonthValue = selectedMonth.value;
+   sessionStorage.setItem('selectedMonth', selectedMonth);
     window.location.href = "results.html";
   });  
         

@@ -20,7 +20,9 @@
 
     <script src="res-bar.js"></script>
     <script defer> 
-      const selectedMonth = localStorage.getItem('selectedMonth');
+   
+    const selectedMonth = sessionStorage.getItem('selectedMonth');
+     console.log(selectedMonth);
       let bustart;
       let buend;
       for (let i=0; i<=11; i++){
