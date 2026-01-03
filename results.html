@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Llantonian Bridge</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="res-byMnth.css">
+ 
+</head>
+<body>
+
+  <br><br><br>
+  <div id="my-grid">
+  
+
+
+  
+</div>
+  <div class="target"></div>
+
+    <script src="res-bar.js"></script>
+    <script defer> 
+      const selectedMonth = localStorage.getItem('selectedMonth');
+      let bustart;
+      let buend;
+      for (let i=0; i<=11; i++){
+        if (buttons[i][0]==selectedMonth){
+          bustart=buttons[i][1];
+          buend=buttons[i][2];
+        }
+      }
+      
+      let yx;
+      for (let x=bustart; x<=(buend); x++)
+      {
+      yx="butn"+x;
+      let bunt="<button type='button' id='"+yx+"' class='btn'>"+myResults[x-1][0]+"</button>";
+      const buon1 = document.createElement("button");
+      const mybut = document.getElementById("my-grid");
+      mybut.appendChild(buon1);
+      buon1.outerHTML=bunt;
+      }
+    
+      let ii;
+      let bt;
+      let sk;
+for (let x=bustart; x<=(buend); x++){ 
+        
+
+if (myResults[x-1][2]=="1"){
+bt="butn".concat(x);
+document.getElementById(bt).style.backgroundColor="lightgray";
+
+document.getElementById(bt).style.color="darkgray";
+} 
+}
+for (let x=bustart; x<=(buend); x++){ 
+        
+     let z="butn".concat(x);
+     console.log(z);
+     let y=document.getElementById(z);
+     
+     y.addEventListener("click",function(e){  
+     console.log(y.innerText);
+     fileCalc(y.innerText);
+
+     ldfle();
+     });
+}
+       
+    function fileCalc(lbl){
+      for (let i=(bustart); i<=(buend); i++){  
+              
+        if (lbl==myResults[i-1][0])
+     
+            if (myResults[i-1][2]=="0"){
+            sk=myResults[i-1][1];
+            sk="/resfiles/"+sk;
+            }
+            else{
+             if (myResults[i-1][2]=="1"){
+               sk="/resfiles/Ranks.html";
+            }
+            }
+          }
+      console.log(sk);
+       return sk; 
+  }
+  function ldfle(){
+       const targetEl=document.querySelector(".target");
+      
+       fetch(sk)
+       
+           .then(res => {
+               if (res.ok) {
+               return res.text();
+               }
+       })
+       .then(selectFile =>{
+       targetEl.innerHTML=selectFile;
+       });
+       }
+       
+      
+       </script>
+
+</body>
+</html>
+

@@ -1,0 +1,98 @@
+body{
+  box-sizing: border-box;
+  background-color:skyblue;
+}
+
+.resbyMnth{
+  background: black;
+  overflow: hidden;
+  width:100%;
+  position:fixed;
+  top:0;
+  left:0;
+}
+.resbyMnth a{
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.resbyMnth a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.resbyMnth a.active {
+  background-color: #04AA6D;
+}
+h1{
+  color: black;
+  text-align:center;
+}
+.butn{
+  background-color:blue;
+  color:white;
+  border: solid 5px blue;
+  border-radius: 15px;
+  width:15%;
+  height: 50px;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top:2px;
+  margin-right:4px;
+}
+.butn:hover{
+  background-color:black;
+}
+.btn{
+  background-color:blue;
+  color:white;
+  border-radius: 15px;
+  width:15%;
+  height: 50px;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top:2px;
+  margin-right:4px;
+}
+.btn:hover{
+  background-color:black;
+}
+#my-grid{
+  display: flex;
+  align-self: auto;
+  justify-content:center;
+  align-items: center;
+  width: 90%; 
+  margin-left:7%;
+  margin-right:6%;
+  margin-top:0px;
+  background-color: skyblue;
+  flex-wrap: wrap;
+
+}
+
+
+@media only screen and (min-width: 360px) and (max-width: 1000px){
+  .btn{
+   width: 33%;   
+  }
+}
+
+@media only screen and (min-width: 260px) and (max-width: 360px){
+  .btn{
+     width: 50%;
+     font-size: 15px;
+    }
+}
+
+@media only screen and (min-width: 20px) and (max-width: 260px){
+  .btn{
+     width: 80%;
+     font-size: 15px;
+  
+
+
+    }
+}

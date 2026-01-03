@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Llantonian Bridge</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="res-bar.css">
+ 
+</head>
+<body>
+
+  <p class="subtit">RESULTS FOR 2026</p>
+
+  <div class="my-grid1">
+  <button id="butn1" class="butn">JAN</button>
+  <button id="butn2" class="butn">FEB</button>
+  <button id="butn3" class="butn">MAR</button>    
+  <button id="butn4" class="butn">APR</button>
+  <button id="butn5" class="butn">MAY</button>
+  <button id="butn6" class="butn">JUN</button> 
+  <button id="butn7" class="butn">JUL</button>
+  <button id="butn8" class="butn">AUG</button>
+  <button id="butn9" class="butn">SEP</button>
+  <button id="butn10" class="butn">OCT</button>
+  <button id="butn11" class="butn">NOV</button>
+  <button id="butn12" class="butn">DEC</button>  
+  
+</div>
+<div id="container6">
+
+  </div>
+  <script src="res-bar.js"></script>
+  <script>
+for (let x=1; x<=12; x++){ 
+  let z="butn"+x;
+  let y=document.getElementById(z);
+  y.addEventListener("click",function(e){
+    let month=e.target.innerText;
+        selectedMonth=month;
+   const selectedMonthValue = selectedMonth.value;
+   localStorage.setItem('selectedMonth', selectedMonth);
+    window.location.href = "results.html";
+  });  
+        
+}
+
+</script>
+</body>
+</html>
+
