@@ -22,7 +22,7 @@
     <script defer> 
    
     const selectedMonth = sessionStorage.getItem('selectedMonth');
-     console.log(selectedMonth);
+     
       let bustart;
       let buend;
       for (let i=0; i<=11; i++){
@@ -59,11 +59,11 @@ document.getElementById(bt).style.color="darkgray";
 for (let x=bustart; x<=(buend); x++){ 
         
      let z="butn".concat(x);
-     console.log(z);
+     
      let y=document.getElementById(z);
      
      y.addEventListener("click",function(e){  
-     console.log(y.innerText);
+    
      fileCalc(y.innerText);
 
      ldfle();
@@ -85,7 +85,7 @@ for (let x=bustart; x<=(buend); x++){
             }
             }
           }
-      console.log(sk);
+
        return sk; 
   }
   function ldfle(){
