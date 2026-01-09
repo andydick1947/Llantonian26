@@ -52,7 +52,7 @@ for (let yy=0;yy<=11;yy++){
 }
 
 
-/*sessions[0][1]=0;*/
+sessions[0][1]=0;
 for (let i=0; i<=51;i++){
   myResults[i][2]=sessions[i][1];
 }
